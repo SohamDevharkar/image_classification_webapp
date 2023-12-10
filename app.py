@@ -11,7 +11,7 @@ import os
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:06$ohamD@127.0.0.1:3306/imageclassifierdb"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE_NAME}"
 app.config["SQLALCHEMY_TRACE_MODIFICATIONS"] = False
 app.config['UPLOAD_FOLDER'] = "\pics"
 db_init(app)
