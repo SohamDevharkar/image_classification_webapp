@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Result</title>
+    <link type = "text/css" rel = "stylesheet" href = "{{ url_for('static', filename='/result.css') }}">
+</head>
+<body>
+    <div id="res">
+        {% if prediction %}
+            <h2>Prediction Result:</h2>
+            <p>The model predicts: {{ prediction }}</p>
+        {% elif error %}
+            <h2>Error:</h2>
+            <p>{{ error }}</p>
+        {% endif %}
+    <div>
+</body>
+</html>
+
+
